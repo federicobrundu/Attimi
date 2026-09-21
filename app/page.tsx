@@ -5,7 +5,6 @@ import Experience from "@/components/Experience";
 import Gallery from "@/components/Gallery";
 import DestinationWeddings from "@/components/DestinationWeddings";
 import CTA from "@/components/CTA";
-import Footer from "@/components/Footer";
 import Background from "@/components/Background";
 
 export default function Home() {
@@ -20,7 +19,6 @@ export default function Home() {
       <Gallery />
       <DestinationWeddings />
       <CTA />
-      <Footer />
     </main>
   );
 }

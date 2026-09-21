@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -17,10 +19,10 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "ATTIMI Wedding Experience",
   description:
-    "Live Music, DJ Set, Entertainment e Show per il tuo matrimonio. Roma | Italia & Destination Weddings.",
+    "Musica, Servizi IT, Fotografia e Fiori per il tuo matrimonio. Roma | Italia & Destination Weddings.",
   openGraph: {
     title: "ATTIMI Wedding Experience",
-    description: "Diamo ritmo alle emozioni.",
+    description: "Costruiamo esperienze che restano.",
     locale: "it_IT",
     type: "website",
   },
@@ -34,7 +36,9 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${playfair.variable} antialiased bg-[#111010] text-[#F8E9D8]`}
       >
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -1,17 +1,18 @@
+import Link from "next/link";
+
 const navLinks = [
-  { label: "Chi Siamo", href: "#chi-siamo" },
-  { label: "Servizi", href: "#servizi" },
-  { label: "Come Lavoriamo", href: "#come-lavoriamo" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Destination", href: "#destination" },
-  { label: "Contatti", href: "#contatti" },
+  { label: "Chi Siamo", href: "/about" },
+  { label: "Servizi", href: "/servizi" },
+  { label: "Portfolio", href: "/portfolio" },
+  { label: "Destination", href: "/destination" },
+  { label: "Contatti", href: "/contatti" },
 ];
 
 const serviceLinks = [
-  { label: "Musica & DJ Set", href: "#servizi" },
-  { label: "Servizi IT", href: "#servizi" },
-  { label: "Fotografia & Video", href: "#servizi" },
-  { label: "Fiori & Decorazioni", href: "#servizi" },
+  { label: "Musica & DJ Set", href: "/servizi#musica" },
+  { label: "Servizi IT", href: "/servizi#it" },
+  { label: "Fotografia & Video", href: "/servizi#foto" },
+  { label: "Fiori & Décor", href: "/servizi#fiori" },
 ];
 
 const socialLinks = [
@@ -25,11 +26,10 @@ export default function Footer() {
     <footer className="bg-[#0D0D0D] px-6 pb-10 pt-20">
       <div className="mx-auto max-w-5xl">
         <div className="grid grid-cols-2 gap-12 md:grid-cols-4">
-          {/* Brand */}
           <div className="col-span-2 flex flex-col gap-4 md:col-span-1">
-            <p className="font-display text-2xl font-bold tracking-[0.35em] text-[#F8E9D8]">
+            <Link href="/" className="font-display text-2xl font-bold tracking-[0.35em] text-[#F8E9D8] hover:opacity-70 transition-opacity">
               ATTIMI
-            </p>
+            </Link>
             <p className="font-sans text-[10px] uppercase tracking-[0.4em] text-[#C7B299]/50">
               Wedding Experience
             </p>
@@ -44,39 +44,36 @@ export default function Footer() {
             </a>
           </div>
 
-          {/* Nav */}
           <div className="flex flex-col gap-3">
             <p className="mb-1 font-sans text-[10px] uppercase tracking-[0.4em] text-[#C7B299]/40">
               Menu
             </p>
             {navLinks.map((l) => (
-              <a
-                key={l.href + l.label}
+              <Link
+                key={l.href}
                 href={l.href}
                 className="font-sans text-[11px] uppercase tracking-[0.2em] text-[#F8E9D8]/40 transition-colors duration-200 hover:text-[#C7B299]"
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
           </div>
 
-          {/* Services */}
           <div className="flex flex-col gap-3">
             <p className="mb-1 font-sans text-[10px] uppercase tracking-[0.4em] text-[#C7B299]/40">
               Servizi
             </p>
             {serviceLinks.map((l) => (
-              <a
+              <Link
                 key={l.label}
                 href={l.href}
                 className="font-sans text-[11px] uppercase tracking-[0.2em] text-[#F8E9D8]/40 transition-colors duration-200 hover:text-[#C7B299]"
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
           </div>
 
-          {/* Social */}
           <div className="flex flex-col gap-3">
             <p className="mb-1 font-sans text-[10px] uppercase tracking-[0.4em] text-[#C7B299]/40">
               Seguici
