@@ -26,7 +26,7 @@ export default function DestinationPage() {
         title="Il vostro matrimonio,<br /><em class='text-[#C7B299]'>ovunque nel mondo.</em>"
         subtitle="Portiamo tutta la nostra esperienza e il nostro team ovunque vogliate celebrare. Nessun compromesso sulla qualità, nessuna location troppo lontana."
         image="/images/portfolio-5.jpg"
-        height="min-h-[60vh]"
+        vh={60}
       />
 
       {/* What's included */}

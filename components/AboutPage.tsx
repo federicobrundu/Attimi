@@ -20,6 +20,8 @@ export default function AboutPage() {
         label="Chi siamo"
         title="La nostra storia"
         image="/images/hero-wedding.jpg"
+        vh={70}
+
       />
 
       {/* Mission */}
