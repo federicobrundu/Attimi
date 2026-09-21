@@ -16,7 +16,7 @@ const serviceLinks = [
 ];
 
 const socialLinks = [
-  { label: "Instagram", href: "https://instagram.com" },
+  { label: "Instagram", href: "https://www.instagram.com/attimiwedding?stkn=MTR0cTl5ZmkwZXAxbQ==" },
   { label: "Facebook", href: "https://facebook.com" },
   { label: "Pinterest", href: "https://pinterest.com" },
 ];
