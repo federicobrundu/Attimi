@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 import { asset } from "@/lib/asset";
 
 const items = [
-  { src: asset("/images/hero.jpg"),          alt: "Atmosfera serale al matrimonio", span: "md:col-span-2 md:row-span-2" },
-  { src: asset("/images/live-music.jpg"),    alt: "Musica dal vivo",           span: "" },
-  { src: asset("/images/dj-set.jpg"),        alt: "Regia audio e luci",        span: "" },
-  { src: asset("/images/entertainment.jpg"), alt: "Ospiti e atmosfera",        span: "md:col-span-2" },
-  { src: asset("/images/show.jpg"),          alt: "Scenografia e decor",       span: "" },
+  { src: asset("/images/portfolio-1.jpg"), alt: "Sposi sotto l'arco fiorito",      span: "md:col-span-2 md:row-span-2" },
+  { src: asset("/images/portfolio-2.jpg"), alt: "Allestimento tavola",              span: "" },
+  { src: asset("/images/portfolio-3.jpg"), alt: "Fotografo al lavoro",              span: "" },
+  { src: asset("/images/portfolio-4.jpg"), alt: "DJ set al matrimonio",             span: "md:col-span-2" },
+  { src: asset("/images/portfolio-5.jpg"), alt: "Ospiti in pista da ballo",         span: "" },
 ];
 
 export default function Gallery() {

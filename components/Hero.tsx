@@ -17,7 +17,7 @@ export default function Hero() {
       {/* Full-bleed hero image */}
       <div className="absolute inset-0">
         <Image
-          src={asset("/images/hero.jpg")}
+          src={asset("/images/hero-wedding.jpg")}
           alt="ATTIMI — Wedding Experience"
           fill
           priority

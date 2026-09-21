@@ -7,28 +7,28 @@ import { asset } from "@/lib/asset";
 const services = [
   {
     key: "musica",
-    image: asset("/images/live-music.jpg"),
+    image: asset("/images/service-music.jpg"),
     label: "Musica & DJ Set",
     subtitle: "Live band, DJ set, impianto audio professionale, console e luci base per ogni momento della cerimonia e del ricevimento.",
     tags: ["Live Band", "DJ Set", "Impianto Audio", "Luci"],
   },
   {
     key: "tech",
-    image: asset("/images/dj-set.jpg"),
+    image: asset("/images/service-it.jpg"),
     label: "Servizi IT",
     subtitle: "Sito matrimonio personalizzato, partecipazioni digitali, cloud foto istantanee, QR code ospiti e mini-app evento.",
     tags: ["Sito Matrimonio", "Cloud Foto", "QR Code", "Mini-App"],
   },
   {
     key: "foto",
-    image: asset("/images/entertainment.jpg"),
+    image: asset("/images/service-photo-video.jpg"),
     label: "Foto & Video",
     subtitle: "Reportage fotografico, video cinematografico, riprese drone, post-produzione editoriale e album fine-art stampati in Italia.",
     tags: ["Reportage", "Video Cinema", "Drone", "Album Fine-Art"],
   },
   {
     key: "fiori",
-    image: asset("/images/show.jpg"),
+    image: asset("/images/service-flowers.jpg"),
     label: "Fiori & Décor",
     subtitle: "Allestimenti floreali, tablescape, archi scenici e decorazioni personalizzate studiate per amplificare l'atmosfera della location.",
     tags: ["Floral Design", "Tablescape", "Archi", "Scenografie"],
