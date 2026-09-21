@@ -9,8 +9,8 @@ interface InternalHeroProps {
   subtitle?: string;
   label?: string;
   image: string;
-  /** Tailwind height class, e.g. "h-[55vh]". Defaults to "h-[55vh]". */
-  height?: string;
+  /** Explicit vh value as number, e.g. 55 = 55vh. Defaults to 55. */
+  vh?: number;
 }
 
 export default function InternalHero({
@@ -18,24 +18,41 @@ export default function InternalHero({
   subtitle,
   label,
   image,
-  height = "h-[55vh]",
+  vh = 55,
 }: InternalHeroProps) {
   return (
-    <section className={`relative overflow-hidden bg-[#111010] ${height}`}>
-      {/* Background image */}
+    <section
+      className="relative overflow-hidden bg-[#111010]"
+      style={{ height: `${vh}vh` }}
+    >
+      {/* Full-bleed image */}
       <Image
         src={asset(image)}
         alt={title}
         fill
         priority
-        className="object-cover object-center opacity-40"
+        className="object-cover object-center"
+        style={{ opacity: 0.45 }}
       />
 
-      {/* Vignette overlays */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#111010] via-[#111010]/30 to-[#111010]/10" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#111010]/40 via-transparent to-[#111010]/40" />
+      {/* Bottom-to-top fade — subtle, stops at 40% */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(to top, #111010 0%, rgba(17,16,16,0.5) 35%, transparent 65%)",
+        }}
+      />
+      {/* Top fade for navbar bleed */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(17,16,16,0.4) 0%, transparent 30%)",
+        }}
+      />
 
-      {/* Centered content — absolute so it never adds height */}
+      {/* Centered content */}
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-6 text-center">
         {label && (
           <motion.p

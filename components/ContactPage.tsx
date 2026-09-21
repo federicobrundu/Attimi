@@ -29,8 +29,8 @@ export default function ContactPage() {
       <InternalHero
         label="Inizia da qui"
         title="Costruiamo insieme<br /><em class='text-[#C7B299]'>il vostro matrimonio.</em>"
-        image="/images/portfolio-1.jpg"
-        height="min-h-[45vh]"
+        image="/images/hero-wedding.jpg"
+        vh={50}
       />
 
       {/* Form + info */}
