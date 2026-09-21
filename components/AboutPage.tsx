@@ -76,7 +76,7 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" as const }}
-            className="font-display text-3xl italic text-[#C7B299] drop-shadow-lg md:text-4xl"
+            className="font-display text-3xl italic text-[#C7B299] drop-shadow-lg md:text-4xl px-6"
           >
             Ogni attimo merita di essere perfetto.
           </motion.p>

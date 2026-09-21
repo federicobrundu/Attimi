@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 80" width="340" height="80" role="img" aria-label="ATTIMI Wedding Experience">
+  <title>ATTIMI Wedding Experience</title>
+  <!-- NO background  transparent for use on any dark surface -->
+  <!-- Symbol 60x60 scaled to 42x42 (x0.70) centered in 80px tall header -->
+  <g transform="translate(19,22) scale(0.70)">
+    <path d="M 22,18 Q 30,10 38,18" fill="none" stroke="#C7B299" stroke-width="2.14" stroke-linecap="round"/>
+    <path d="M 13,30 Q 30,16 47,30" fill="none" stroke="#C7B299" stroke-width="2.86" stroke-linecap="round"/>
+    <path d="M 22,42 Q 30,34 38,42" fill="none" stroke="#C7B299" stroke-width="2.14" stroke-linecap="round"/>
+  </g>
+  <!-- Vertical divider -->
+  <line x1="80" y1="20" x2="80" y2="60" stroke="#C7B299" stroke-width="0.5" stroke-opacity="0.35"/>
+  <!-- Wordmark -->
+  <text x="98" y="45"
+    font-family="'Playfair Display', Georgia, 'Times New Roman', serif"
+    font-weight="300"
+    font-size="27"
+    fill="#F8E9D8"
+    letter-spacing="9">ATTIMI</text>
+  <!-- Tagline -->
+  <text x="99" y="62"
+    font-family="'Inter', 'Helvetica Neue', Arial, sans-serif"
+    font-weight="300"
+    font-size="7.5"
+    fill="#C7B299"
+    letter-spacing="5">WEDDING EXPERIENCE</text>
+</svg>

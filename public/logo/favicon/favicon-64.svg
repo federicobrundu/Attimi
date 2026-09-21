@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <title>ATTIMI</title>
+  <rect width="64" height="64" fill="#1A1A1A"/>
+  <!-- Symbol at 64px  full three arcs, scale 60�64: factorH1.067 -->
+  <path d="M 14,19.3 Q 32,10.7 50,19.3" fill="none" stroke="#C7B299" stroke-width="1.4" stroke-linecap="round"/>
+  <path d="M 7.5,32 Q 32,17.1 56.5,32" fill="none" stroke="#C7B299" stroke-width="1.9" stroke-linecap="round"/>
+  <path d="M 14,44.8 Q 32,36.2 50,44.8" fill="none" stroke="#C7B299" stroke-width="1.4" stroke-linecap="round"/>
+</svg>

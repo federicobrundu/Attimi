@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import { asset } from "@/lib/asset";
 
 const navLinks = [
   { label: "Chi Siamo", href: "/about" },
@@ -27,13 +29,17 @@ export default function Footer() {
       <div className="mx-auto max-w-5xl">
         <div className="grid grid-cols-2 gap-12 md:grid-cols-4">
           <div className="col-span-2 flex flex-col gap-4 md:col-span-1">
-            <Link href="/" className="font-display text-2xl font-bold tracking-[0.35em] text-[#F8E9D8] hover:opacity-70 transition-opacity">
-              ATTIMI
+            {/* Logo */}
+            <Link href="/" className="inline-block transition-opacity duration-200 hover:opacity-70">
+              <Image
+                src={asset("/logo/svg/logo-footer.svg")}
+                alt="ATTIMI Wedding Experience"
+                width={200}
+                height={47}
+                unoptimized
+              />
             </Link>
-            <p className="font-sans text-[10px] uppercase tracking-[0.4em] text-[#C7B299]/50">
-              Wedding Experience
-            </p>
-            <p className="mt-2 font-display text-base italic text-[#C7B299]/70">
+            <p className="mt-3 font-display text-base italic text-[#C7B299]/70">
               Costruiamo esperienze che restano.
             </p>
             <a

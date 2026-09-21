@@ -1,9 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { asset } from "@/lib/asset";
 
 const links = [
   { label: "Chi Siamo", href: "/about" },
@@ -41,9 +43,17 @@ export default function Navbar() {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
           <Link
             href="/"
-            className="font-display text-lg font-bold tracking-[0.35em] text-[#F8E9D8] transition-opacity duration-200 hover:opacity-70"
+            className="flex items-center transition-opacity duration-200 hover:opacity-70"
+            aria-label="ATTIMI — torna alla home"
           >
-            ATTIMI
+            <Image
+              src={asset("/logo/svg/logo-navbar.svg")}
+              alt="ATTIMI"
+              width={152}
+              height={31}
+              priority
+              unoptimized
+            />
           </Link>
 
           <nav className="hidden items-center gap-8 md:flex">
@@ -89,6 +99,16 @@ export default function Navbar() {
             transition={{ duration: 0.35, ease: "easeOut" as const }}
             className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 bg-[#111010]"
           >
+            {/* Logo in drawer */}
+            <div className="absolute top-6 left-6">
+              <Image
+                src={asset("/logo/svg/logo-navbar.svg")}
+                alt="ATTIMI"
+                width={140}
+                height={28}
+                unoptimized
+              />
+            </div>
             {links.map((l, i) => (
               <motion.div
                 key={l.href}
