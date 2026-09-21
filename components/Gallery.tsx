@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 import { asset } from "@/lib/asset";
 
 const items = [
-  { src: asset("/images/hero.jpg"),          alt: "Live set serale",          span: "md:col-span-2 md:row-span-2" },
-  { src: asset("/images/live-music.jpg"),    alt: "Mani sul pianoforte",       span: "" },
-  { src: asset("/images/dj-set.jpg"),        alt: "DJ set al mixer",           span: "" },
-  { src: asset("/images/entertainment.jpg"), alt: "Silhouette in movimento",   span: "md:col-span-2" },
-  { src: asset("/images/show.jpg"),          alt: "Show serale",               span: "" },
+  { src: asset("/images/hero.jpg"),          alt: "Atmosfera serale al matrimonio", span: "md:col-span-2 md:row-span-2" },
+  { src: asset("/images/live-music.jpg"),    alt: "Musica dal vivo",           span: "" },
+  { src: asset("/images/dj-set.jpg"),        alt: "Regia audio e luci",        span: "" },
+  { src: asset("/images/entertainment.jpg"), alt: "Ospiti e atmosfera",        span: "md:col-span-2" },
+  { src: asset("/images/show.jpg"),          alt: "Scenografia e decor",       span: "" },
 ];
 
 export default function Gallery() {
@@ -24,11 +24,15 @@ export default function Gallery() {
         className="mx-auto mb-16 max-w-5xl"
       >
         <p className="mb-3 font-sans text-[10px] uppercase tracking-[0.5em] text-[#C7B299]/50">
-          Portfolio
+          I nostri matrimoni
         </p>
         <h2 className="font-display text-4xl font-light text-[#F8E9D8] md:text-5xl">
           Live Moments
         </h2>
+        <p className="mt-5 max-w-lg font-sans text-sm leading-8 tracking-wide text-[#F8E9D8]/45">
+          Una selezione di attimi vissuti. Musica, luci, emozioni e atmosfere
+          costruite per ogni matrimonio con cura e visione.
+        </p>
         <div className="mt-5 h-px w-12 bg-[#C7B299]/30" />
       </motion.div>
 
