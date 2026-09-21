@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { asset } from "@/lib/asset";
 import type { Transition } from "framer-motion";
 
 const t = (delay = 0): Transition => ({
@@ -16,7 +17,7 @@ export default function Hero() {
       {/* Full-bleed hero image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/hero.jpg"
+          src={asset("/images/hero.jpg")}
           alt="ATTIMI — cinematic musician silhouette"
           fill
           priority

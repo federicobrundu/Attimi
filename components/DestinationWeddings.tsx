@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { asset } from "@/lib/asset";
 
 const locations = ["Roma", "Toscana", "Amalfi", "Sicilia", "Puglia", "Paris", "Côte d'Azur", "Santorini"];
 
@@ -11,7 +12,7 @@ export default function DestinationWeddings() {
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/show.jpg"
+          src={asset("/images/show.jpg")}
           alt="Destination Wedding"
           fill
           className="object-cover object-center opacity-20"

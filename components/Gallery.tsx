@@ -2,13 +2,14 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { asset } from "@/lib/asset";
 
 const items = [
-  { src: "/images/hero.jpg",          alt: "Live set serale",          span: "md:col-span-2 md:row-span-2" },
-  { src: "/images/live-music.jpg",    alt: "Mani sul pianoforte",       span: "" },
-  { src: "/images/dj-set.jpg",        alt: "DJ set al mixer",           span: "" },
-  { src: "/images/entertainment.jpg", alt: "Silhouette in movimento",   span: "md:col-span-2" },
-  { src: "/images/show.jpg",          alt: "Show serale",               span: "" },
+  { src: asset("/images/hero.jpg"),          alt: "Live set serale",          span: "md:col-span-2 md:row-span-2" },
+  { src: asset("/images/live-music.jpg"),    alt: "Mani sul pianoforte",       span: "" },
+  { src: asset("/images/dj-set.jpg"),        alt: "DJ set al mixer",           span: "" },
+  { src: asset("/images/entertainment.jpg"), alt: "Silhouette in movimento",   span: "md:col-span-2" },
+  { src: asset("/images/show.jpg"),          alt: "Show serale",               span: "" },
 ];
 
 export default function Gallery() {

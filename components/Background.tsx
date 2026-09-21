@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { type ReactNode } from "react";
 
 interface BackgroundProps {
@@ -18,7 +19,7 @@ export default function Background({ children, className = "" }: BackgroundProps
       {/* Texture layer */}
       <div className="absolute inset-0 opacity-[0.04]">
         <Image
-          src="/images/background-texture.jpg"
+          src={asset("/images/background-texture.jpg")}
           alt=""
           fill
           aria-hidden

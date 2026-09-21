@@ -2,29 +2,30 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { asset } from "@/lib/asset";
 
 const services = [
   {
     key: "live-music",
-    image: "/images/live-music.jpg",
+    image: asset("/images/live-music.jpg"),
     label: "Live Music",
     subtitle: "Una proposta live che fa la differenza.",
   },
   {
     key: "dj-set",
-    image: "/images/dj-set.jpg",
+    image: asset("/images/dj-set.jpg"),
     label: "DJ Set",
     subtitle: "La colonna sonora del tuo evento.",
   },
   {
     key: "entertainment",
-    image: "/images/entertainment.jpg",
+    image: asset("/images/entertainment.jpg"),
     label: "Entertainment",
     subtitle: "Energia, coinvolgimento e momenti unici.",
   },
   {
     key: "show",
-    image: "/images/show.jpg",
+    image: asset("/images/show.jpg"),
     label: "Show",
     subtitle: "Atmosfere spettacolari curate nel dettaglio.",
   },

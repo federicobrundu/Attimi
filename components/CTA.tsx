@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { asset } from "@/lib/asset";
 
 export default function CTA() {
   return (
@@ -12,7 +13,7 @@ export default function CTA() {
       {/* Background texture */}
       <div className="absolute inset-0 opacity-[0.05]">
         <Image
-          src="/images/background-texture.jpg"
+          src={asset("/images/background-texture.jpg")}
           alt=""
           fill
           aria-hidden
