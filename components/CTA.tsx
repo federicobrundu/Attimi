@@ -10,7 +10,6 @@ export default function CTA() {
       id="contatti"
       className="relative overflow-hidden bg-[#111010] px-6 py-28 md:py-40"
     >
-      {/* Background texture */}
       <div className="absolute inset-0 opacity-[0.05]">
         <Image
           src={asset("/images/background-texture.jpg")}
@@ -21,7 +20,6 @@ export default function CTA() {
         />
       </div>
 
-      {/* Warm glow orb */}
       <div
         aria-hidden
         className="pointer-events-none absolute left-1/2 top-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#C7B299]/6 blur-3xl"
@@ -45,9 +43,9 @@ export default function CTA() {
           transition={{ duration: 0.8, ease: "easeOut" as const, delay: 0.1 }}
           className="font-display text-4xl font-light leading-snug text-[#F8E9D8] md:text-5xl"
         >
-          Ogni grande storia
+          Costruiamo insieme
           <br />
-          <em className="text-[#C7B299]">merita la giusta colonna sonora.</em>
+          <em className="text-[#C7B299]">il vostro matrimonio.</em>
         </motion.h2>
 
         <motion.div
@@ -65,8 +63,9 @@ export default function CTA() {
           transition={{ duration: 0.7, ease: "easeOut" as const, delay: 0.3 }}
           className="font-sans text-sm leading-8 tracking-wide text-[#F8E9D8]/50"
         >
-          Raccontaci il tuo evento. Costruiremo insieme un&rsquo;esperienza
-          su misura, pensata per voi.
+          Raccontateci il vostro sogno. Pensiamo noi a tutto il resto:
+          musica, tecnologia, fotografia, fiori e coordinamento completo.
+          Un unico team, una sola visione, il vostro giorno perfetto.
         </motion.p>
 
         <motion.div
@@ -88,7 +87,7 @@ export default function CTA() {
             rel="noopener noreferrer"
             className="inline-block border border-[#C7B299]/40 px-10 py-4 font-sans text-[11px] uppercase tracking-[0.3em] text-[#C7B299] transition-all duration-300 hover:bg-[#C7B299]/10"
           >
-            WhatsApp
+            Scrivici su WhatsApp
           </a>
         </motion.div>
       </div>

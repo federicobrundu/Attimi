@@ -18,12 +18,11 @@ export default function Hero() {
       <div className="absolute inset-0">
         <Image
           src={asset("/images/hero.jpg")}
-          alt="ATTIMI — cinematic musician silhouette"
+          alt="ATTIMI — Wedding Experience"
           fill
           priority
-          className="object-cover object-center opacity-60"
+          className="object-cover object-center opacity-55"
         />
-        {/* Dark vignette gradient */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#111010] via-[#111010]/40 to-[#111010]/20" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#111010]/60 via-transparent to-[#111010]/60" />
       </div>
@@ -59,7 +58,7 @@ export default function Hero() {
           transition={t(0.2)}
           className="mt-1 font-sans text-[10px] uppercase tracking-[0.5em] text-[#C7B299]/80"
         >
-          wedding
+          wedding experience
         </motion.p>
 
         {/* Divider */}
@@ -77,9 +76,9 @@ export default function Hero() {
           transition={t(0.4)}
           className="font-display text-xl font-light uppercase tracking-[0.2em] text-[#F8E9D8]/90 md:text-2xl lg:text-3xl"
         >
-          Più di un evento.
+          Il tuo matrimonio,
           <br />
-          Un&rsquo;esperienza da vivere.
+          curato in ogni dettaglio.
         </motion.p>
 
         {/* Italic tagline */}
@@ -90,7 +89,7 @@ export default function Hero() {
           className="mt-7 font-display text-2xl italic text-[#C7B299] md:text-3xl"
           style={{ textShadow: "0 2px 20px rgba(199,178,153,0.3)" }}
         >
-          Diamo ritmo alle emozioni.
+          Costruiamo esperienze che restano.
         </motion.p>
 
         {/* CTA */}
@@ -98,13 +97,19 @@ export default function Hero() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={t(0.7)}
-          className="mt-10"
+          className="mt-10 flex flex-col items-center gap-4 sm:flex-row"
         >
           <a
-            href="#servizi"
-            className="inline-block border border-[#C7B299]/50 px-9 py-3.5 font-sans text-[11px] uppercase tracking-[0.3em] text-[#C7B299] transition-all duration-300 hover:bg-[#C7B299]/10 hover:border-[#C7B299]/80"
+            href="#contatti"
+            className="inline-block bg-[#C7B299] px-9 py-3.5 font-sans text-[11px] uppercase tracking-[0.3em] text-[#111010] transition-opacity duration-300 hover:opacity-80"
           >
-            Scopri l&rsquo;esperienza
+            Inizia da qui
+          </a>
+          <a
+            href="#servizi"
+            className="inline-block border border-[#C7B299]/50 px-9 py-3.5 font-sans text-[11px] uppercase tracking-[0.3em] text-[#C7B299] transition-all duration-300 hover:bg-[#C7B299]/10"
+          >
+            I nostri servizi
           </a>
         </motion.div>
       </div>

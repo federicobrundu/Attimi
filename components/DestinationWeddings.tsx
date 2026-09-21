@@ -4,12 +4,14 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { asset } from "@/lib/asset";
 
-const locations = ["Roma", "Toscana", "Amalfi", "Sicilia", "Puglia", "Paris", "Côte d'Azur", "Santorini"];
+const locations = [
+  "Roma", "Toscana", "Amalfi", "Sicilia", "Puglia",
+  "Paris", "Côte d'Azur", "Santorini", "Lake Como", "Vienna",
+];
 
 export default function DestinationWeddings() {
   return (
     <section id="destination" className="relative overflow-hidden bg-[#1A1A1A] px-6 py-28 md:py-40">
-      {/* Background image */}
       <div className="absolute inset-0">
         <Image
           src={asset("/images/show.jpg")}
@@ -39,9 +41,9 @@ export default function DestinationWeddings() {
             transition={{ duration: 0.8, ease: "easeOut" as const, delay: 0.1 }}
             className="font-display text-4xl font-light leading-snug text-[#F8E9D8] md:text-5xl"
           >
-            L&rsquo;emozione
+            Il tuo matrimonio
             <br />
-            <em className="text-[#C7B299]">non conosce confini.</em>
+            <em className="text-[#C7B299]">ovunque nel mondo.</em>
           </motion.h2>
 
           <motion.div
@@ -59,12 +61,12 @@ export default function DestinationWeddings() {
             transition={{ duration: 0.7, ease: "easeOut" as const, delay: 0.25 }}
             className="font-sans text-sm leading-8 tracking-wide text-[#F8E9D8]/55"
           >
-            Portiamo la nostra musica e la nostra energia ovunque nel mondo.
-            Dall&rsquo;Italia alle destinazioni più esclusive d&rsquo;Europa,
-            ogni evento riceve la stessa cura e la stessa passione.
+            Organizziamo matrimoni completi in tutta Italia e nelle destinazioni
+            più esclusive d&rsquo;Europa. Musica, tecnologia, fotografia, fiori:
+            tutto il nostro team si sposta con voi. Un matrimonio da sogno, senza
+            compromessi, ovunque vogliate celebrarlo.
           </motion.p>
 
-          {/* Location tags */}
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -82,7 +84,6 @@ export default function DestinationWeddings() {
             ))}
           </motion.div>
 
-          {/* CTA */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -94,7 +95,7 @@ export default function DestinationWeddings() {
               href="#contatti"
               className="inline-block border border-[#C7B299]/50 px-8 py-3.5 font-sans text-[11px] uppercase tracking-[0.3em] text-[#C7B299] transition-all duration-300 hover:bg-[#C7B299]/10 hover:border-[#C7B299]/80"
             >
-              Pianifica il tuo evento
+              Pianifica il tuo matrimonio
             </a>
           </motion.div>
         </div>

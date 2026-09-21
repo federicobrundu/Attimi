@@ -6,52 +6,53 @@ import { asset } from "@/lib/asset";
 
 const services = [
   {
-    key: "live-music",
+    key: "musica",
     image: asset("/images/live-music.jpg"),
-    label: "Live Music",
-    subtitle: "Una proposta live che fa la differenza.",
+    label: "Musica & DJ Set",
+    subtitle: "Live performance, DJ set e intrattenimento musicale su misura per ogni momento della giornata.",
+    tags: ["Live Band", "DJ Set", "Show", "Entertainment"],
   },
   {
-    key: "dj-set",
+    key: "tech",
     image: asset("/images/dj-set.jpg"),
-    label: "DJ Set",
-    subtitle: "La colonna sonora del tuo evento.",
+    label: "Servizi IT",
+    subtitle: "Audio professionale, luci scenografiche, schermi LED, streaming live e fotocabine interattive.",
+    tags: ["Audio HD", "Light Design", "LED Wall", "Live Streaming"],
   },
   {
-    key: "entertainment",
+    key: "foto",
     image: asset("/images/entertainment.jpg"),
-    label: "Entertainment",
-    subtitle: "Energia, coinvolgimento e momenti unici.",
+    label: "Foto & Video",
+    subtitle: "Reportage cinematografico, drone, post-produzione editoriale e album di lusso stampati in Italia.",
+    tags: ["Reportage", "Drone", "Film Cinematic", "Album Lusso"],
   },
   {
-    key: "show",
+    key: "fiori",
     image: asset("/images/show.jpg"),
-    label: "Show",
-    subtitle: "Atmosfere spettacolari curate nel dettaglio.",
+    label: "Fiori & Decor",
+    subtitle: "Allestimenti floreali, tablescape, archi scenici e decorazioni personalizzate in ogni dettaglio.",
+    tags: ["Allestimenti", "Floral Design", "Tablescape", "Archi"],
   },
 ];
 
 export default function Services() {
   return (
-    <section
-      id="servizi"
-      className="relative bg-[#1A1A1A] px-6 py-28 md:py-36"
-    >
+    <section id="servizi" className="relative bg-[#1A1A1A] px-6 py-28 md:py-36">
       {/* Section header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7, ease: "easeOut" as const }}
-        className="mb-20 text-center"
+        className="mx-auto mb-20 max-w-6xl"
       >
         <p className="mb-3 font-sans text-[10px] uppercase tracking-[0.5em] text-[#C7B299]/50">
           I nostri servizi
         </p>
-        <h2 className="font-display text-3xl font-light uppercase tracking-[0.25em] text-[#F8E9D8] md:text-5xl">
-          L&rsquo;esperienza
+        <h2 className="font-display text-4xl font-light text-[#F8E9D8] md:text-5xl">
+          Tutto sotto un&rsquo;unica regia.
         </h2>
-        <div className="mx-auto mt-5 h-px w-12 bg-[#C7B299]/30" />
+        <div className="mt-5 h-px w-12 bg-[#C7B299]/30" />
       </motion.div>
 
       {/* Cards grid */}
@@ -62,11 +63,7 @@ export default function Services() {
             initial={{ opacity: 0, y: 28 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{
-              duration: 0.7,
-              ease: "easeOut" as const,
-              delay: i * 0.12,
-            }}
+            transition={{ duration: 0.7, ease: "easeOut" as const, delay: i * 0.12 }}
             className="group relative overflow-hidden"
           >
             {/* Image */}
@@ -77,8 +74,7 @@ export default function Services() {
                 fill
                 className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
               />
-              {/* Overlay gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#111010] via-[#111010]/30 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#111010] via-[#111010]/40 to-transparent" />
             </div>
 
             {/* Text block */}
@@ -86,10 +82,20 @@ export default function Services() {
               <p className="font-sans text-[10px] uppercase tracking-[0.35em] text-[#C7B299]">
                 {s.label}
               </p>
-              <p className="mt-2 font-sans text-[11px] leading-relaxed tracking-wide text-[#F8E9D8]/60">
+              <p className="mt-2 font-sans text-[10px] leading-relaxed tracking-wide text-[#F8E9D8]/55">
                 {s.subtitle}
               </p>
-              {/* Hover underline */}
+              {/* Tags */}
+              <div className="mt-3 flex flex-wrap gap-1.5 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                {s.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="border border-[#C7B299]/25 px-2 py-0.5 font-sans text-[9px] uppercase tracking-widest text-[#C7B299]/60"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
               <div className="mt-3 h-px w-0 bg-[#C7B299]/50 transition-all duration-500 group-hover:w-8" />
             </div>
           </motion.article>

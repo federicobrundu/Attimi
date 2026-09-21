@@ -3,15 +3,23 @@
 import { motion } from "framer-motion";
 
 const values = [
-  { label: "Musica che emoziona", desc: "Ogni nota è scelta per toccare il cuore." },
-  { label: "Persone che coinvolgono", desc: "Artisti capaci di creare connessioni autentiche." },
-  { label: "Esperienze che restano", desc: "Momenti indimenticabili impressi nella memoria." },
+  {
+    label: "Un solo interlocutore",
+    desc: "Musica, tecnologia, fotografia e fiori coordinati da un'unica regia. Nessun caos, solo armonia.",
+  },
+  {
+    label: "Cura maniacale del dettaglio",
+    desc: "Dal primo incontro al giorno del matrimonio, ogni elemento è pensato, scelto e perfezionato.",
+  },
+  {
+    label: "Esperienze su misura",
+    desc: "Nessun pacchetto standard. Ogni matrimonio è un progetto unico costruito attorno a voi.",
+  },
 ];
 
 export default function About() {
   return (
     <section id="chi-siamo" className="relative bg-[#111010] px-6 py-28 md:py-40">
-      {/* thin top rule */}
       <div className="mx-auto mb-20 h-px max-w-5xl bg-[#C7B299]/15" />
 
       <div className="mx-auto grid max-w-5xl gap-16 md:grid-cols-2 md:gap-24">
@@ -26,9 +34,9 @@ export default function About() {
             Chi siamo
           </p>
           <h2 className="font-display text-4xl font-light leading-snug text-[#F8E9D8] md:text-5xl">
-            Un team di professionisti
+            Un&rsquo;agenzia wedding
             <br />
-            <em className="text-[#C7B299]">con una grande passione.</em>
+            <em className="text-[#C7B299]">a servizio completo.</em>
           </h2>
           <div className="mt-8 h-px w-12 bg-[#C7B299]/30" />
         </motion.div>
@@ -42,9 +50,10 @@ export default function About() {
           className="flex flex-col justify-center gap-10"
         >
           <p className="font-sans text-sm leading-8 tracking-wide text-[#F8E9D8]/55">
-            Siamo un team di professionisti con una grande passione per la musica,
-            lo spettacolo e le persone. Crediamo che ogni evento meriti una colonna
-            sonora su misura, capace di amplificare ogni emozione.
+            ATTIMI nasce dall&rsquo;unione di professionisti del wedding con competenze
+            in musica, tecnologia, fotografia e floral design. Crediamo che il
+            matrimonio perfetto non si costruisca sommando fornitori, ma orchestrando
+            ogni elemento con una visione unica e coerente.
           </p>
 
           <ul className="flex flex-col gap-7">
