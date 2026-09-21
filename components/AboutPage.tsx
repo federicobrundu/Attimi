@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { asset } from "@/lib/asset";
+import InternalHero from "@/components/InternalHero";
 
 const values = [
   { n: "01", label: "Unicità", body: "Ogni matrimonio è un progetto irripetibile. Non utilizziamo template: costruiamo ogni esperienza da zero, attorno a voi." },
@@ -14,42 +15,12 @@ const values = [
 
 export default function AboutPage() {
   return (
-    <main className="bg-[#111010] pt-24">
-      {/* Hero */}
-      <section className="relative min-h-[60vh] overflow-hidden">
-        <Image
-          src={asset("/images/hero-wedding.jpg")}
-          alt="ATTIMI Team"
-          fill
-          priority
-          className="object-cover object-center opacity-40"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#111010] via-[#111010]/30 to-transparent" />
-        <div className="relative z-10 flex min-h-[60vh] flex-col items-center justify-center px-6 text-center">
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" as const }}
-            className="mb-4 font-sans text-[10px] uppercase tracking-[0.5em] text-[#C7B299]/60"
-          >
-            Chi siamo
-          </motion.p>
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" as const, delay: 0.1 }}
-            className="font-display text-5xl font-light text-[#F8E9D8] md:text-7xl"
-          >
-            La nostra storia
-          </motion.h1>
-          <motion.div
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 0.5, ease: "easeOut" as const, delay: 0.3 }}
-            className="mt-6 h-px w-12 origin-center bg-[#C7B299]/40"
-          />
-        </div>
-      </section>
+    <main className="bg-[#111010]">
+      <InternalHero
+        label="Chi siamo"
+        title="La nostra storia"
+        image="/images/hero-wedding.jpg"
+      />
 
       {/* Mission */}
       <section className="px-6 py-24">

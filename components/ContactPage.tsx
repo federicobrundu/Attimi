@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { asset } from "@/lib/asset";
+import InternalHero from "@/components/InternalHero";
 
 export default function ContactPage() {
   const [sent, setSent] = useState(false);
@@ -24,38 +25,13 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="bg-[#111010] pt-24">
-      {/* Hero */}
-      <section className="relative min-h-[50vh] overflow-hidden">
-        <Image
-          src={asset("/images/portfolio-1.jpg")}
-          alt="Contatti ATTIMI"
-          fill
-          priority
-          className="object-cover object-center opacity-35"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#111010] via-[#111010]/40 to-transparent" />
-        <div className="relative z-10 flex min-h-[50vh] flex-col items-center justify-center px-6 text-center">
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" as const }}
-            className="mb-4 font-sans text-[10px] uppercase tracking-[0.5em] text-[#C7B299]/60"
-          >
-            Inizia da qui
-          </motion.p>
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" as const, delay: 0.1 }}
-            className="font-display text-5xl font-light text-[#F8E9D8] md:text-7xl"
-          >
-            Costruiamo insieme
-            <br />
-            <em className="text-[#C7B299]">il vostro matrimonio.</em>
-          </motion.h1>
-        </div>
-      </section>
+    <main className="bg-[#111010]">
+      <InternalHero
+        label="Inizia da qui"
+        title="Costruiamo insieme<br /><em class='text-[#C7B299]'>il vostro matrimonio.</em>"
+        image="/images/portfolio-1.jpg"
+        height="min-h-[45vh]"
+      />
 
       {/* Form + info */}
       <section className="px-6 py-20">

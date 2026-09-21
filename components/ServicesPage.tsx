@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { asset } from "@/lib/asset";
+import InternalHero from "@/components/InternalHero";
 
 const services = [
   {
@@ -42,35 +43,13 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <main className="bg-[#111010] pt-24">
-      {/* Header */}
-      <section className="px-6 py-20 text-center">
-        <motion.p
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut" as const }}
-          className="mb-4 font-sans text-[10px] uppercase tracking-[0.5em] text-[#C7B299]/50"
-        >
-          I nostri servizi
-        </motion.p>
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" as const, delay: 0.1 }}
-          className="font-display text-5xl font-light text-[#F8E9D8] md:text-7xl"
-        >
-          Tutto sotto un&rsquo;unica regia.
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.7, ease: "easeOut" as const, delay: 0.25 }}
-          className="mx-auto mt-6 max-w-xl font-sans text-sm leading-8 tracking-wide text-[#F8E9D8]/45"
-        >
-          Un solo team coordina ogni aspetto del vostro matrimonio.
-          Nessun fornitore da inseguire. Solo un&rsquo;esperienza integrata, curata e senza stress.
-        </motion.p>
-      </section>
+    <main className="bg-[#111010]">
+      <InternalHero
+        label="I nostri servizi"
+        title="Tutto sotto un&rsquo;unica regia."
+        subtitle="Un solo team coordina ogni aspetto del vostro matrimonio. Nessun fornitore da inseguire. Solo un'esperienza integrata, curata e senza stress."
+        image="/images/service-music.jpg"
+      />
 
       {/* Service sections */}
       {services.map((s, i) => (

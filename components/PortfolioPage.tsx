@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { asset } from "@/lib/asset";
+import InternalHero from "@/components/InternalHero";
 
 const categories = [
   { label: "Momenti", tag: "moments" },
@@ -28,35 +29,13 @@ const items = [
 
 export default function PortfolioPage() {
   return (
-    <main className="bg-[#111010] pt-24">
-      {/* Header */}
-      <section className="px-6 py-20 text-center">
-        <motion.p
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut" as const }}
-          className="mb-4 font-sans text-[10px] uppercase tracking-[0.5em] text-[#C7B299]/50"
-        >
-          I nostri matrimoni
-        </motion.p>
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" as const, delay: 0.1 }}
-          className="font-display text-5xl font-light text-[#F8E9D8] md:text-7xl"
-        >
-          Live Moments
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.7, ease: "easeOut" as const, delay: 0.25 }}
-          className="mx-auto mt-6 max-w-xl font-sans text-sm leading-8 tracking-wide text-[#F8E9D8]/40"
-        >
-          Una selezione di attimi vissuti nei matrimoni che abbiamo costruito.
-          Musica, luci, fiori, emozioni — ogni dettaglio racconta una storia.
-        </motion.p>
-      </section>
+    <main className="bg-[#111010]">
+      <InternalHero
+        label="I nostri matrimoni"
+        title="Live Moments"
+        subtitle="Una selezione di attimi vissuti nei matrimoni che abbiamo costruito. Musica, luci, fiori, emozioni — ogni dettaglio racconta una storia."
+        image="/images/portfolio-3.jpg"
+      />
 
       {/* Categories */}
       <div className="flex justify-center gap-6 overflow-x-auto px-6 pb-12">

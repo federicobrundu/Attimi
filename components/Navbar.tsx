@@ -15,6 +15,7 @@ const links = [
 
 export default function Navbar() {
   const pathname = usePathname();
+  const isHome = pathname === "/";
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -26,15 +27,18 @@ export default function Navbar() {
 
   useEffect(() => setOpen(false), [pathname]);
 
+  const headerClass = isHome
+    ? `fixed left-0 right-0 top-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? "bg-[#111010]/90 backdrop-blur-md"
+          : "bg-transparent"
+      }`
+    : "sticky top-0 z-50 bg-[#111010]/95 backdrop-blur-sm border-b border-white/10";
+
   return (
     <>
-      <header
-        className={`fixed left-0 right-0 top-0 z-50 transition-all duration-500 ${
-          scrolled ? "bg-[#111010]/90 backdrop-blur-md" : "bg-transparent"
-        }`}
-      >
+      <header className={headerClass}>
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-          {/* Logo */}
           <Link
             href="/"
             className="font-display text-lg font-bold tracking-[0.35em] text-[#F8E9D8] transition-opacity duration-200 hover:opacity-70"
@@ -42,7 +46,6 @@ export default function Navbar() {
             ATTIMI
           </Link>
 
-          {/* Desktop nav */}
           <nav className="hidden items-center gap-8 md:flex">
             {links.map((l) => (
               <Link
@@ -65,26 +68,18 @@ export default function Navbar() {
             </Link>
           </nav>
 
-          {/* Hamburger */}
           <button
             onClick={() => setOpen(!open)}
             className="flex flex-col items-end gap-1.5 md:hidden"
             aria-label="Menu"
           >
-            <span
-              className={`block h-px bg-[#C7B299] transition-all duration-300 ${open ? "w-5 translate-y-2.5 rotate-45" : "w-5"}`}
-            />
-            <span
-              className={`block h-px bg-[#C7B299] transition-all duration-300 ${open ? "w-0 opacity-0" : "w-4"}`}
-            />
-            <span
-              className={`block h-px bg-[#C7B299] transition-all duration-300 ${open ? "w-5 -translate-y-2.5 -rotate-45" : "w-3"}`}
-            />
+            <span className={`block h-px bg-[#C7B299] transition-all duration-300 ${open ? "w-5 translate-y-2.5 rotate-45" : "w-5"}`} />
+            <span className={`block h-px bg-[#C7B299] transition-all duration-300 ${open ? "w-0 opacity-0" : "w-4"}`} />
+            <span className={`block h-px bg-[#C7B299] transition-all duration-300 ${open ? "w-5 -translate-y-2.5 -rotate-45" : "w-3"}`} />
           </button>
         </div>
       </header>
 
-      {/* Mobile drawer */}
       <AnimatePresence>
         {open && (
           <motion.div

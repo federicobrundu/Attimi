@@ -1,9 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { asset } from "@/lib/asset";
+import InternalHero from "@/components/InternalHero";
 
 const locations = [
   { area: "Italia", places: ["Roma", "Toscana", "Amalfi Coast", "Sicilia", "Puglia", "Lago di Como", "Venezia", "Portofino"] },
@@ -21,53 +20,14 @@ const included = [
 
 export default function DestinationPage() {
   return (
-    <main className="bg-[#111010] pt-24">
-      {/* Hero */}
-      <section className="relative min-h-[70vh] overflow-hidden">
-        <Image
-          src={asset("/images/portfolio-5.jpg")}
-          alt="Destination Wedding"
-          fill
-          priority
-          className="object-cover object-center opacity-40"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#111010] via-[#111010]/30 to-transparent" />
-        <div className="relative z-10 flex min-h-[70vh] flex-col items-center justify-center px-6 text-center">
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" as const }}
-            className="mb-4 font-sans text-[10px] uppercase tracking-[0.5em] text-[#C7B299]/60"
-          >
-            Destination Weddings
-          </motion.p>
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" as const, delay: 0.1 }}
-            className="font-display text-5xl font-light text-[#F8E9D8] md:text-7xl"
-          >
-            Il vostro matrimonio,
-            <br />
-            <em className="text-[#C7B299]">ovunque nel mondo.</em>
-          </motion.h1>
-          <motion.div
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 0.5, ease: "easeOut" as const, delay: 0.3 }}
-            className="mt-6 h-px w-12 origin-center bg-[#C7B299]/40"
-          />
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" as const, delay: 0.45 }}
-            className="mt-6 max-w-lg font-sans text-sm leading-8 tracking-wide text-[#F8E9D8]/50"
-          >
-            Portiamo tutta la nostra esperienza e il nostro team ovunque vogliate
-            celebrare. Nessun compromesso sulla qualità, nessuna location troppo lontana.
-          </motion.p>
-        </div>
-      </section>
+    <main className="bg-[#111010]">
+      <InternalHero
+        label="Destination Weddings"
+        title="Il vostro matrimonio,<br /><em class='text-[#C7B299]'>ovunque nel mondo.</em>"
+        subtitle="Portiamo tutta la nostra esperienza e il nostro team ovunque vogliate celebrare. Nessun compromesso sulla qualità, nessuna location troppo lontana."
+        image="/images/portfolio-5.jpg"
+        height="min-h-[60vh]"
+      />
 
       {/* What's included */}
       <section className="px-6 py-24">
