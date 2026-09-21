@@ -99,16 +99,6 @@ export default function Navbar() {
             transition={{ duration: 0.35, ease: "easeOut" as const }}
             className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 bg-[#111010]"
           >
-            {/* Logo in drawer */}
-            <div className="absolute top-6 left-6">
-              <Image
-                src={asset("/logo/svg/logo-navbar.svg")}
-                alt="ATTIMI"
-                width={140}
-                height={28}
-                unoptimized
-              />
-            </div>
             {links.map((l, i) => (
               <motion.div
                 key={l.href}
