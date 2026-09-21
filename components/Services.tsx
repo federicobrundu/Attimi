@@ -6,25 +6,25 @@ import { motion } from "framer-motion";
 const services = [
   {
     key: "live-music",
-    image: "/attimi-wedding/images/live-music.jpg",
+    image: "/images/live-music.jpg",
     label: "Live Music",
     subtitle: "Una proposta live che fa la differenza.",
   },
   {
     key: "dj-set",
-    image: "/attimi-wedding/images/dj-set.jpg",
+    image: "/images/dj-set.jpg",
     label: "DJ Set",
     subtitle: "La colonna sonora del tuo evento.",
   },
   {
     key: "entertainment",
-    image: "/attimi-wedding/images/entertainment.jpg",
+    image: "/images/entertainment.jpg",
     label: "Entertainment",
     subtitle: "Energia, coinvolgimento e momenti unici.",
   },
   {
     key: "show",
-    image: "/attimi-wedding/images/show.jpg",
+    image: "/images/show.jpg",
     label: "Show",
     subtitle: "Atmosfere spettacolari curate nel dettaglio.",
   },

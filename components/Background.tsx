@@ -18,7 +18,7 @@ export default function Background({ children, className = "" }: BackgroundProps
       {/* Texture layer */}
       <div className="absolute inset-0 opacity-[0.04]">
         <Image
-          src="/attimi-wedding/images/background-texture.jpg"
+          src="/images/background-texture.jpg"
           alt=""
           fill
           aria-hidden
