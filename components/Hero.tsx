@@ -29,19 +29,6 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center px-6 text-center">
-        {/* Logo ring */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={t(0)}
-          className="mb-8 flex h-24 w-24 items-center justify-center rounded-full border border-[#C7B299]/50"
-          style={{ boxShadow: "0 0 40px rgba(199,178,153,0.12)" }}
-        >
-          <span className="font-display text-2xl font-semibold tracking-[0.3em] text-[#C7B299]">
-            A
-          </span>
-        </motion.div>
-
         {/* Brand name */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
@@ -129,7 +116,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={t(1.1)}
-        className="absolute bottom-9 right-8 z-10 flex flex-col items-center gap-1.5"
+        className="absolute bottom-24 right-8 z-10 flex flex-col items-center gap-1.5"
       >
         <span className="font-sans text-[9px] uppercase tracking-[0.3em] text-[#C7B299]/40">
           scroll
